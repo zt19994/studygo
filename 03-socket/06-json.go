@@ -34,7 +34,7 @@ func main() {
 	fmt.Println("json.Marshal :", string(marshal))
 
 	var peter2 Student
-	if err := json.Unmarshal([]byte(marshal), &peter2); err != nil {
+	if err := json.Unmarshal(marshal, &peter2); err != nil {
 		fmt.Println("json.Unmarshal err:", err)
 		return
 	}
